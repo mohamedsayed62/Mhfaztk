@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
+
+    <title>محفظتك</title>
+  </head>
+  <body>
+    <header>
+      <nav class="relative">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="items-center flex gap-5">
+              <img src="assets/img/logo.png" alt="Your Company">
+              <span class="font-bold">مــحــفــظــتــك</span>
+            </div>
+            <div class="flex flex-1 items-center sm:items-stretch sm:justify-center">
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                  <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-gray-300">الصفحة الرئيسية</a>
+                  <a href="input.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-white/5 hover:text-gray-300">إضافة الدخل</a>
+                  <a href="history.html" aria-current="page" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-white/5">السجل</a>
+                </div>
+              </div>
+            </div>
+            <button class="btn-toggle sm:block md:hidden p-3">
+              <span class="toggle"></span>
+              <span class="toggle my-1"></span>
+              <span class="toggle"></span>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobile-menu" hidden>
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+            <a href="index.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-600">الصفحة الرئيسية</a>
+            <a href="input.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-white/5 hover:text-white">إضافة الدخل</a>
+            <a href="history.html" aria-current="page" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white hover:bg-white/5 hover:text-white">السجل</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mx-auto overflow-hidden">
+
+      <div class="search-box p-10 items-center flex flex-wrap gap-10 mt-10 mx-auto justify-center">
+        <div class="start-date">
+          <label for="start-date">من</label>
+          <input class="pl-10 pr-5 py-1 border-2 rounded-2xl" type="date" id="start-date">
+        </div>
+        <div class="end-date my-5">
+          <label for="end-date">الي</label>
+          <input class="pl-10 pr-5 py-1 border-2 rounded-2xl" type="date" id="end-date">
+        </div>
+        <div class="custom-select">
+          <div class="selected rounded-2xl border-2 py-1 px-5"></div>
+          <div class="options">
+            <div>كل الأصناف</div>
+          </div>
+        </div>
+
+        <button class="btn rounded-full text-white py-2 px-10 text-center font-bold">بحث</button>
+      </div>
+
+      <div class="box p-10 max-w-full mx-auto rounded-xl shadow-none relative">
+        <div class="heading mx-auto text-4xl mb-10">
+          <h1>ســجــل الــمــصــروفــات</h1>
+          <p class="text-xl text-center mt-2 text-gray-400"></p>
+          <span class="mt-5"></span>
+        </div>
+
+        <div class="box pop-box p-10 w-96  mx-auto rounded-xl">
+          <button class="close-btn rounded-full bg-red-600 text-white">x</button>
+          <div class="heading mx-auto text-4xl mb-10">
+            <h1>تــعــديــل الــعــمــلــيــة</h1>
+            <p class="text-xl text-center mt-2 text-gray-400"></p>
+            <span class="mt-5"></span>
+          </div>
+
+          <div class="btns flex justify-center gap-5">
+            <button class="btn active w-96 py-2 border rounded bg-red-600 text-white hover:text-white hover:bg-red-600">دخــل</button>
+            <button class="btn w-96 py-2 border rounded text-red-400 hover:bg-red-600 hover:text-white">صــرف</button>
+          </div>
+
+          <input class="block rounded border w-full my-7 py-1 px-5" type="date" placeholder="التاريخ" id="date" required>
+          <input class="block rounded border w-full my-7 py-1 px-5" type="text" placeholder="فضفض" id="descreption">
+          <input class="block rounded border w-full my-7 py-1 px-5" type="text" placeholder="الصنف" id="category" required>
+          <input class="block rounded border w-full my-7 py-1 px-5" type="text" placeholder="يا فلوسك" id="amount" required>
+
+          <button class="sub-btn block rounded text-white py-2 px-5 text-center font-bold mx-auto hover:bg-blue-900">حــفــظ الــعــمــلــيــة</button>
+
+          <p class="msg hidden text-gray-300">تم حفظ العملية</p>
+
+      </div>
+
+        <div class="box box-table rounded-xl p-6 mt-20">
+        <ul class="table-titles grid grid-cols-6 text-center text-gray-400 pb-5 bdr-btm">
+          <li>التاريخ</li>
+          <li>الوصف</li>
+          <li>النوع</li>
+          <li>الفئة</li>
+          <li>المبلغ</li>
+          <li>التعديل</li>
+        </ul>
+        <p class="table-p text-center pt-5 text-red-600 font-bold">لا توجد أية مــعــامــلات</p>
+        
+      </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

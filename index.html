@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
+
+    <title>محفظتك</title>
+  </head>
+  <body>
+    <header>
+      <nav class="relative">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="items-center flex gap-5">
+              <img src="assets/img/logo.png" alt="Your Company">
+              <span class="font-bold">مــحــفــظــتــك</span>
+            </div>
+            <div class="flex flex-1 items-center sm:items-stretch sm:justify-center">
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                  <a href="index.html" aria-current="page" class="rounded-md px-3 py-2 text-sm font-medium text-gray">الصفحة الرئيسية</a>
+                  <a href="input.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray hover:bg-white/5 hover:text-gray-300">إضافة الدخل</a>
+                  <a href="history.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray hover:bg-white/5 hover:text-gray-300">السجل</a>
+                </div>
+              </div>
+            </div>
+            <button class="btn-toggle sm:block md:hidden p-3">
+              <span class="toggle"></span>
+              <span class="toggle my-1"></span>
+              <span class="toggle"></span>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobile-menu" hidden class="hidden-menu">
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+            <a href="index.html" aria-current="page" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">الصفحة الرئيسية</a>
+            <a href="input.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-white/5 hover:text-white">إضافة الدخل</a>
+            <a href="history.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:bg-white/5 hover:text-white">السجل</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="money-data mt-10 py-10">
+      <div class="container p-4 mx-auto">
+        <div class="heading scroll mx-auto text-4xl mb-10">
+          <h1>بــيــانــات الــرصــيــد</h1>
+          <span class="mt-5"></span>
+        </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="box hvrBox rounded-xl p-6 text-center scroll">
+          <h2 class="text-gray-900 text-2xl">إجمالي الدخل</h2>
+          <div>
+            <i class="fa-solid fa-dollar-sign text-xl my-3"></i>
+            <h3 class="income text-gray-900 text-2xl text-green-600 mb-3"></h3>
+            <span class="text-gray-400">إجمالي الدخل</span>
+          </div>
+        </div>
+        <div class="box hvrBox rounded-xl p-6 text-center scroll">
+          <h2 class="text-gray-900 text-2xl">إجمالي المصروفات</h2>
+          <div>
+            <i class="fa-solid fa-dollar-sign text-xl my-3"></i>
+            <h3 class="costs text-gray-900 text-2xl mb-3 text-red-600"></h3>
+            <span class="text-gray-400">إجمالي المصروفات</span>
+          </div>
+        </div>
+        <div class="box hvrBox rounded-xl p-6 text-center scroll">
+          <h2 class="text-gray-900 text-2xl">صافي الرصيد</h2>
+          <div>
+            <i class="fa-solid fa-dollar-sign text-xl my-3"></i>
+            <h3 class="pure text-gray-900 text-2xl mb-3 text-green-600"></h3>
+            <span class="text-gray-400">الرصيد المتبقي بعد المصروفات</span>
+          </div>
+        </div>
+      </div>
+      <div class="heading scroll mx-auto text-4xl mb-2 mt-20">
+        <h1>أحــدث الــمــعــامــلات</h1>
+        <p class="text-xl text-center mt-2 text-gray-400">أخــر خــمــس مــعــامــلات</p>
+        <span class="mt-5"></span>
+      </div>
+      <div class="box rounded-xl p-6 mt-20">
+        <ul class="table-titles grid grid-cols-5 text-center text-gray-400 pb-5 bdr-btm">
+          <li>التاريخ</li>
+          <li>الوصف</li>
+          <li>النوع</li>
+          <li>الفئة</li>
+          <li>المبلغ</li>
+        </ul>
+        <p class="table-p text-center pt-5 text-red-600 font-bold">لا توجد أية مــعــامــلات</p>
+        
+      </div>
+    </div>
+
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
