@@ -193,6 +193,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .options {
   display: none;
   position: absolute;
+  top: 100%;
   z-index: 1000;
   width: 100%;
   background: #fff;
@@ -253,8 +254,11 @@ ul li i {
   }
 
   @media (max-width : 767px) {
+  .container > .box {
+    padding: 20px !important;
+  }
   li {
-    font-size: 9px;
+    font-size: 11px;
   }
   .search-box .btn {
     margin-top : 20px;
